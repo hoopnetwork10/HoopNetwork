@@ -257,6 +257,54 @@ nav .links a{padding:8px 12px;white-space:nowrap}
 .lk::after{content:"";position:absolute;inset:0;background:inherit;filter:grayscale(1) contrast(1.05);z-index:0}
 .lk:before{z-index:1}
 .lk .tag,.lk .lock{z-index:2}
+
+dialog.sheet{border:1px solid #2a3556;border-radius:22px;padding:0;background:linear-gradient(160deg,#141b30 0%,#0d1322 60%,#0b0f1a 100%);color:#fff;width:min(920px,94vw);max-height:92vh;overflow:auto;box-shadow:0 30px 90px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.03),0 0 80px color-mix(in srgb,var(--tc,#6ea8fe) 18%,transparent);margin:auto}
+dialog.sheet::backdrop{background:rgba(5,8,16,.72);backdrop-filter:blur(7px)}
+dialog.sheet[open]{animation:shin .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes shin{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+dialog.lsheet{width:min(560px,94vw)}
+.sh{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;min-height:100%}
+.sh.one{display:block}
+.sh:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,transparent,var(--tc),transparent);z-index:2}
+.sh:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:radial-gradient(circle at 0 0,#000,transparent 70%);mask-image:radial-gradient(circle at 0 0,#000,transparent 70%)}
+.sx{position:absolute;top:14px;right:14px;z-index:5;width:38px;height:38px;border-radius:50%;border:1px solid #2a3556;background:rgba(255,255,255,.05);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer}
+.sx:hover{background:rgba(255,255,255,.12)}
+.sa{position:relative;z-index:1;padding:40px 34px;background:radial-gradient(circle at 20% 0,color-mix(in srgb,var(--tc) 22%,transparent),transparent 60%);border-right:1px solid #222c44}
+.sk{display:inline-block;font:800 .72rem Inter,sans-serif;letter-spacing:.22em;color:var(--tc);border:1px solid color-mix(in srgb,var(--tc) 55%,transparent);border-radius:99px;padding:6px 12px;background:color-mix(in srgb,var(--tc) 10%,transparent)}
+.sa h3,.lh h3{font:400 2.3rem/1.05 Anton,sans-serif;letter-spacing:.02em;text-transform:uppercase;margin:16px 0 8px}
+.sp{font:800 1.5rem Inter,sans-serif;color:var(--tc);margin-bottom:12px}
+.sl{color:#c7cedd;font-size:.98rem;line-height:1.55;margin:0 0 18px}
+.sf{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.sf li{position:relative;padding-left:30px;color:#e6eaf5;font-size:.95rem;line-height:1.4}
+.sf li:before{content:"";position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;background:color-mix(in srgb,var(--tc) 18%,transparent);border:1px solid color-mix(in srgb,var(--tc) 60%,transparent)}
+.sf li:after{content:"";position:absolute;left:6.5px;top:5.5px;width:5px;height:8px;border:solid var(--tc);border-width:0 2px 2px 0;transform:rotate(40deg) scale(.8)}
+.sb{margin-top:22px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid #222c44;font-size:.9rem;color:#c7cedd}
+.sb span{display:block;font:800 .68rem Inter,sans-serif;letter-spacing:.2em;color:var(--tc);margin-bottom:4px}.sb b{font-weight:600;color:#fff}
+.sm{position:relative;z-index:1;padding:40px 34px 30px}
+.sst{list-style:none;display:flex;gap:8px;margin:0 40px 20px 0;padding:0;font-size:.72rem;color:#aeb8d0}
+.sst li{flex:1;display:flex;align-items:center;gap:7px;line-height:1.2}
+.sst b{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--tc);color:#0b1020;font-size:.72rem}
+.sm label{display:block;margin:14px 0 5px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:#aeb8d0}.sm label i{font-style:normal;opacity:.6}
+.sm input:not([type=radio]),.sm textarea{width:100%;background:rgba(8,12,22,.7);border:1px solid #2a3556;border-radius:10px;padding:12px 13px;color:#fff;font:inherit;font-size:.95rem;box-sizing:border-box;transition:border-color .15s,box-shadow .15s}
+.sm input:focus,.sm textarea:focus{outline:0;border-color:var(--tc);box-shadow:0 0 0 3px color-mix(in srgb,var(--tc) 22%,transparent)}
+.sg2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg{display:flex;gap:8px}.seg label{flex:1;margin:0}.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:11px;border-radius:10px;border:1px solid #2a3556;background:rgba(8,12,22,.7);color:#c7cedd;cursor:pointer;font-size:.92rem}
+.seg input:checked+span{border-color:var(--tc);color:#fff;background:color-mix(in srgb,var(--tc) 18%,transparent)}
+.sgo{width:100%;margin-top:20px;min-height:54px;border-radius:12px!important;background:linear-gradient(135deg,var(--tc),color-mix(in srgb,var(--tc) 55%,#4f78f0))!important;color:#0b1020!important;letter-spacing:.06em;box-shadow:0 10px 30px color-mix(in srgb,var(--tc) 30%,transparent);transition:transform .15s}
+.sgo:hover{transform:translateY(-1px)}.sgo span{display:inline-block;transition:transform .15s}.sgo:hover span{transform:translateX(4px)}
+.fine{margin:12px 0 0;font-size:.74rem;color:#8e99b5;text-align:center}
+.sm .ok{margin-top:14px;padding:12px 14px;border-radius:10px;background:rgba(80,200,140,.1);border:1px solid rgba(80,200,140,.4);color:#bdf0d6;font-size:.9rem}
+.lh{position:relative;z-index:1;padding:38px 34px 6px;text-align:center;background:radial-gradient(circle at 50% 0,color-mix(in srgb,var(--tc) 22%,transparent),transparent 65%)}
+.lbadge{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 16px;border-radius:50%;color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,#0b0f1a);border:1px solid color-mix(in srgb,var(--tc) 60%,transparent);box-shadow:0 0 40px color-mix(in srgb,var(--tc) 35%,transparent)}.lbadge svg{width:28px;height:28px}
+.lh .sl{margin:0 auto;max-width:420px}
+.lbody{position:relative;z-index:1;padding:20px 34px 32px}
+.sb2{font:800 .68rem Inter,sans-serif;letter-spacing:.2em;color:var(--tc);margin-bottom:12px}
+.lnote{margin-top:20px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid #222c44;font-size:.9rem;color:#c7cedd;line-height:1.5}.lnote b{display:block;color:#fff;margin-bottom:2px}
+.lrow{display:flex;gap:10px;margin-top:20px}.lrow .sgo{margin-top:0;flex:1.4}
+.x2{flex:1;border:1px solid #2a3556;background:transparent;color:#c7cedd;border-radius:12px;cursor:pointer;font:600 .95rem Inter,sans-serif;min-height:54px}
+.x2:hover{background:rgba(255,255,255,.06)}
+@media(max-width:760px){.sh{grid-template-columns:1fr}.sa{border-right:0;border-bottom:1px solid #222c44;padding:30px 22px 24px}.sm{padding:26px 22px 24px}.sg2{grid-template-columns:1fr}.sa h3{font-size:1.9rem}.sst{margin-right:0}.lh{padding:34px 22px 4px}.lbody{padding:18px 22px 26px}}
 </style>
 </head>
 <body>
@@ -334,17 +382,41 @@ nav .links a{padding:8px 12px;white-space:nowrap}
 <label for="cr">What is this about?</label><select id="cr" required><option value="">Choose one</option><option>Team access (locked videos)</option><option>Strategy session</option><option>Question about the free videos</option><option>Something else</option></select>
 <label for="cm">Message</label><textarea id="cm" rows="6" required="" maxlength="2000"></textarea>
 <button type="submit" class="btn" style="margin-top:22px">Send message</button><div class="ok" id="cstat" hidden=""></div></form></div></main>
-<dialog id="dlg"><form method="dialog" class="dlg" id="inq">
-  <h3 id="dt">Film &amp; Concepts Session (Gold)</h3>
-  <p>Send your details and we'll check availability. This does not book a session.</p>
-  <label for="n">Name</label><input id="n" required="">
-  <label for="e">Email</label><input id="e" type="email" required="">
-  <label for="m">What do you want to work on?</label><textarea id="m" rows="3"></textarea>
-  <div class="ok" id="sent" hidden="">Inquiry sent. We'll follow up once availability is checked.</div>
-  <div class="row"><button type="button" class="x" id="close">Close</button><button type="submit" class="go">Send inquiry</button></div>
+<dialog id="dlg" class="sheet"><form method="dialog" id="inq" class="sh" style="--tc:#b8c4dc">
+  <button type="button" class="sx" id="close" aria-label="Close">&times;</button>
+  <aside class="sa">
+    <div class="sk" id="dk">SILVER</div>
+    <h3 id="dt">Quick Consult</h3>
+    <div class="sp" id="dp">$30&ndash;$45</div>
+    <p class="sl" id="dl"></p>
+    <ul class="sf" id="df"></ul>
+    <div class="sb"><span>Best for</span><b id="dbest"></b></div>
+  </aside>
+  <div class="sm">
+    <ol class="sst"><li><b>1</b>Send inquiry</li><li><b>2</b>We confirm time &amp; price</li><li><b>3</b>Meet &amp; work</li></ol>
+    <div class="sg2"><div><label for="n">Name</label><input id="n" required autocomplete="name"></div><div><label for="e">Email</label><input id="e" type="email" required autocomplete="email"></div></div>
+    <div class="sg2"><div><label for="ph">Phone <i>(optional)</i></label><input id="ph" type="tel" autocomplete="tel"></div><div><label for="wh">Preferred days / times</label><input id="wh" placeholder="e.g. weeknights after 7pm"></div></div>
+    <div id="dx" hidden>
+      <label>Who is this for?</label>
+      <div class="seg"><label><input type="radio" name="who" value="Individual player/coach" checked><span>Individual</span></label><label><input type="radio" name="who" value="Team"><span>Team</span></label></div>
+      <label for="ct">City / location</label><input id="ct" placeholder="Where would we meet?">
+    </div>
+    <label for="m">What do you want to work on?</label><textarea id="m" rows="3" placeholder="Plays, concepts, film you want reviewed, goals..."></textarea>
+    <div class="ok" id="sent" hidden></div>
+    <button type="submit" class="go sgo">Send inquiry <span>&rarr;</span></button>
+    <p class="fine">Sending an inquiry does not book a session. Time and payment are confirmed after we check availability.</p>
+  </div>
 </form></dialog>
 
-<dialog id="lockdlg"><div class="dlg"><h3 id="lt">Team access</h3><p>Please contact the store owner for access.</p><div class="row"><button type="button" class="x" id="lx">Close</button><button type="button" class="go" id="lgo">Contact us</button></div></div></dialog>
+<dialog id="lockdlg" class="sheet lsheet"><div class="sh one" style="--tc:#e0b04a">
+  <button type="button" class="sx" id="lx" aria-label="Close">&times;</button>
+  <div class="lh"><span class="lbadge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+  <div class="sk">TEAM ACCESS &middot; LOCKED</div><h3 id="lt">Defense concepts</h3>
+  <p class="sl" id="ld"></p></div>
+  <div class="lbody"><div class="sb2">What&rsquo;s inside</div><ul class="sf" id="lf"></ul>
+  <div class="lnote"><b>How to get access</b><span>Team access is set up directly with us. Send a quick message and we&rsquo;ll get your coaching staff and roster set up.</span></div>
+  <div class="lrow"><button type="button" class="x2" id="lx2">Maybe later</button><button type="button" class="go sgo" id="lgo">Request access <span>&rarr;</span></button></div></div>
+</div></dialog>
 <dialog id="vdlg" class="vdlg"><div class="vh"><strong id="vt"></strong><button type="button" class="x" id="vx">Close</button></div><div id="vp"></div><a id="vo" target="_blank" rel="noopener">Open in a new tab ↗</a></dialog>
 <dialog id="adlg"><grammarly-extension data-grammarly-shadow-root="true" style="visibility: visible !important; position: absolute; top: -1px; left: -1px; pointer-events: none; margin: 0px; border: 0px; --rem: 16;" class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="visibility: visible !important; position: absolute; top: -1px; left: -1px; pointer-events: none; margin: 0px; border: 0px; --rem: 16;" class="dnXmp"></grammarly-extension><form class="dlg" id="aform"><h3>Add a video</h3><p>Paste a YouTube or Vimeo link, or a direct .mp4 link.</p>
 <label for="at">Title</label><input id="at" required="" maxlength="80"><label for="au">Video link</label><input id="au" type="url" required="" placeholder="https://">
@@ -354,11 +426,26 @@ nav .links a{padding:8px 12px;white-space:nowrap}
 
 <script>
 const dlg=document.getElementById('dlg'),inq=document.getElementById('inq'),sent=document.getElementById('sent');
+const TIERS={Silver:{c:'#b8c4dc',k:'SILVER',t:'Quick Consult',p:'$30\u2013$45',l:'A fast, focused call to get answers on the exact things you are stuck on.',f:['30\u201345 minute Zoom call','Focused on 2\u20133 topics or plays','Straight, actionable feedback','Come with specific questions'],b:'Players and coaches with a few targeted questions'},
+Gold:{c:'#e0b04a',k:'GOLD \u00b7 CORE SESSION',t:'Film & Concepts',p:'$60\u2013$75',l:'A deeper working session built around your film, your plays and your concepts.',f:['60 minute Zoom session','Up to 5 concepts or plays','Review clips, plays or your playbook','Share film ahead of time for a sharper session'],b:'Coaches and players who want film broken down in detail'},
+Diamond:{c:'#7fd8ff',k:'DIAMOND \u00b7 IN-PERSON',t:'In-Person 1-on-1',p:'Custom quote \u00b7 from $115+',l:'Personalized on-court strategy for an individual or a full team, built around you.',f:['Duration arranged with you','On-court, personalized strategy','Individuals or team visits','Limited availability, deposit may be required'],b:'Teams and serious competitors who want hands-on work'}};
+let curTier='Silver';
 document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',()=>{
-  document.getElementById('dt').textContent=b.dataset.plan;sent.hidden=true;inq.reset();dlg.showModal();}));
+  const key=/Gold/.test(b.dataset.plan)?'Gold':/Diamond/.test(b.dataset.plan)?'Diamond':'Silver',T=TIERS[key];curTier=key;
+  inq.style.setProperty('--tc',T.c);document.getElementById('dk').textContent=T.k;document.getElementById('dt').textContent=T.t;
+  document.getElementById('dp').textContent=T.p;document.getElementById('dl').textContent=T.l;document.getElementById('dbest').textContent=T.b;
+  document.getElementById('df').innerHTML=T.f.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('dx').hidden=key!=='Diamond';
+  document.querySelector('#inq .sgo').firstChild.textContent=key==='Diamond'?'Request custom quote ':'Send inquiry ';
+  sent.hidden=true;inq.reset();dlg.showModal();dlg.scrollTop=0;}));
 document.getElementById('close').addEventListener('click',()=>dlg.close());
-inq.addEventListener('submit',e=>{e.preventDefault();const E='hoopnetwork10@gmail.com',pl=document.getElementById('dt').textContent,n=document.getElementById('n').value.trim(),em=document.getElementById('e').value.trim(),m=document.getElementById('m').value.trim();
-const a=document.createElement('a');a.href='mailto:'+E+'?subject='+encodeURIComponent('Hoop Network session inquiry: '+pl+' - '+n)+'&body='+encodeURIComponent('Session: '+pl+'\n\n'+m+'\n\nFrom: '+n+' ('+em+')');document.body.appendChild(a);a.click();a.remove();
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+inq.addEventListener('submit',e=>{e.preventDefault();const E='hoopnetwork10@gmail.com',T=TIERS[curTier],pl=T.t+' ('+curTier+')',v=id=>document.getElementById(id).value.trim(),n=v('n'),em=v('e');
+let body='Session: '+pl+'\n';
+if(v('wh'))body+='Preferred days/times: '+v('wh')+'\n';
+if(curTier==='Diamond'){body+='For: '+inq.querySelector('input[name=who]:checked').value+'\n';if(v('ct'))body+='Location: '+v('ct')+'\n';}
+body+='\n'+v('m')+'\n\nFrom: '+n+' ('+em+')'+(v('ph')?' \u00b7 '+v('ph'):'');
+const a=document.createElement('a');a.href='mailto:'+E+'?subject='+encodeURIComponent('Hoop Network session inquiry: '+pl+' - '+n)+'&body='+encodeURIComponent(body);document.body.appendChild(a);a.click();a.remove();
 sent.hidden=false;sent.textContent='Your email app should open with your inquiry ready to send. If it does not, email us at '+E+'.';});
 document.getElementById('mailform').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,E='hoopnetwork10@gmail.com',em=f.querySelector('input').value.trim(),btn=f.querySelector('button'),ok=document.getElementById('mailok');btn.disabled=true;
 let saved=false;
@@ -430,8 +517,16 @@ if(window.claude&&claude.use)claude.use('user').then(u=>{owner=!!(u&&u.isOwner()
 
 <script>
 (function(){const d=document.getElementById('lockdlg');
-document.querySelectorAll('[data-lock]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('lt').textContent=b.dataset.lock;d.showModal();}));
-document.getElementById('lx').addEventListener('click',()=>d.close());
+const L={'Defense concepts':['Man-to-man and help principles, broken down','Team defensive schemes and rotations','Film-based breakdowns of real game situations'],
+'Offensive concepts':['Spacing, actions and offensive structure','Set plays and counters explained step by step','Film breakdowns you can teach your roster'],
+'Plays against man':['Set plays built to beat man-to-man','Screening actions and timing details','Diagrams plus film of each play in action'],
+'Plays against zone':['Attacks for 2-3, 3-2 and 1-3-1 zones','Where the gaps are and how to find them','Film breakdowns with coaching points'],
+'Press break':['Full-court press breaks and alignments','What to do against man and zone presses','Film of each break and how to practice it']};
+const D='Part of the Hoop Network team library: deeper breakdowns made for coaches and their rosters.';
+document.querySelectorAll('[data-lock]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.lock;document.getElementById('lt').textContent=n;document.getElementById('ld').textContent=D;
+document.getElementById('lf').innerHTML=(L[n]||[]).map(x=>'<li>'+x+'</li>').join('');d.showModal();d.scrollTop=0;}));
+['lx','lx2'].forEach(i=>document.getElementById(i).addEventListener('click',()=>d.close()));
+d.addEventListener('click',e=>{if(e.target===d)d.close();});
 document.getElementById('lgo').addEventListener('click',()=>{d.close();location.hash='#/contact?from='+encodeURIComponent(document.getElementById('lt').textContent);});})();
 </script>
 <script>
