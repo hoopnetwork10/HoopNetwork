@@ -257,6 +257,10 @@ nav .links a{padding:8px 12px;white-space:nowrap}
 .lk{background-size:cover;background-repeat:no-repeat;background-color:#10162a}
 .lk:before{background:linear-gradient(rgba(8,11,20,.62),rgba(8,11,20,.62)),radial-gradient(circle,rgba(224,176,74,.25),transparent 62%)}
 .lk .lock{background:rgba(11,15,26,.88)}
+/* Safari: aspect-ratio inside a button flex column collapses; use padding ratio instead */
+.lk{display:block;width:100%;flex:0 0 auto;height:0;padding-bottom:53.125%;aspect-ratio:auto;overflow:hidden}
+.lk .lock{position:absolute;top:50%;left:50%;margin:-32px 0 0 -32px}
+.lk svg{display:block}
 /* team photos in black and white (lock + tag stay gold) */
 .lk{background-color:#10162a}
 .lk{filter:none}
