@@ -312,6 +312,37 @@ dialog.lsheet{width:min(560px,94vw)}
 .x2{flex:1;border:1px solid #2a3556;background:transparent;color:#c7cedd;border-radius:12px;cursor:pointer;font:600 .95rem Inter,sans-serif;min-height:54px}
 .x2:hover{background:rgba(255,255,255,.06)}
 @media(max-width:760px){.sh{grid-template-columns:1fr}.sa{border-right:0;border-bottom:1px solid #222c44;padding:30px 22px 24px}.sm{padding:26px 22px 24px}.sg2{grid-template-columns:1fr}.sa h3{font-size:1.9rem}.sst{margin-right:0}.lh{padding:34px 22px 4px}.lbody{padding:18px 22px 26px}}
+
+.wrap .back{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #2a3556;border-radius:99px;background:rgba(255,255,255,.04);color:#aeb8d0;font-size:.78rem;transition:.15s}.wrap .back:hover{color:#fff;border-color:var(--sky)}
+.chead{position:relative;margin:22px 0 22px;border:1px solid #2a3556;border-radius:24px;overflow:hidden;background:#0d1322;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 90px rgba(79,120,240,.12)}
+.chead .cbg{position:absolute;inset:0;background-size:cover;background-position:center 35%;opacity:.5;filter:saturate(.85)}
+.chead:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0b0f1a 8%,rgba(11,15,26,.82) 45%,rgba(11,15,26,.35) 100%),radial-gradient(circle at 12% 0,rgba(79,120,240,.35),transparent 55%)}
+.chead:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(circle at 0 0,#000,transparent 70%);mask-image:radial-gradient(circle at 0 0,#000,transparent 70%)}
+.chead .cin{position:relative;z-index:2;padding:clamp(28px,5vw,56px);max-width:760px}
+.chead .ck{display:inline-block;font:800 .72rem Inter,sans-serif;letter-spacing:.22em;color:var(--sky);border:1px solid rgba(110,168,254,.5);background:rgba(110,168,254,.1);border-radius:99px;padding:6px 12px}
+.chead h1{font:400 clamp(2.4rem,7vw,4.6rem)/1 Anton,Impact,sans-serif;letter-spacing:.015em;text-transform:uppercase;margin:16px 0 12px}
+.chead p{color:#c7cedd;font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.55;margin:0 0 22px;max-width:560px}
+.cmeta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.cmeta span{padding:8px 14px;border-radius:99px;border:1px solid #2a3556;background:rgba(8,12,22,.6);font-size:.85rem;color:#c7cedd}.cmeta b{color:#fff}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 22px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:10px 16px;border-radius:99px;border:1px solid #2a3556;background:rgba(255,255,255,.04);color:#c7cedd;font-weight:600;font-size:.88rem;white-space:nowrap;transition:.15s}.chip:hover{color:#fff;border-color:var(--sky)}.chip.on{background:linear-gradient(135deg,#4f78f0,#6ea8fe);color:#0b1020;border-color:transparent}
+.vgrid{display:grid;gap:24px}
+.vc{position:relative;background:linear-gradient(160deg,#151c30,#0e1424);border:1px solid #2a3556;border-radius:20px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}
+.vc:hover{transform:translateY(-4px);border-color:rgba(110,168,254,.6);box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 40px rgba(79,120,240,.2)}
+.vc .thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;border-bottom:1px solid #2a3556;padding:0;overflow:hidden;cursor:pointer;color:#fff;background:radial-gradient(ellipse at 50% 100%,#23376f,#0b1020 65%)}
+.vc .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}.vc:hover .thumb img{transform:scale(1.05)}
+.vc .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%,rgba(5,8,16,.75))}
+.vc .lab{position:absolute;left:16px;top:14px;z-index:2;font:800 .68rem Inter,sans-serif;letter-spacing:.22em;color:#fff;opacity:.9}
+.vc .play{position:absolute;inset:0;margin:auto;z-index:2;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#4f78f0,#6ea8fe);display:grid;place-items:center;box-shadow:0 0 0 8px rgba(110,168,254,.18),0 12px 40px rgba(79,120,240,.55);transition:transform .2s}.vc:hover .play{transform:scale(1.1)}
+.vc .wtag{position:absolute;right:14px;bottom:12px;z-index:2;font:800 .68rem Inter,sans-serif;letter-spacing:.18em;padding:6px 10px;border-radius:99px;background:rgba(8,12,22,.7);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.vc .vb{padding:22px 24px 26px}.vc .vk{font:800 .68rem Inter,sans-serif;letter-spacing:.2em;color:var(--sky);margin-bottom:8px;text-transform:uppercase}
+.vc .vb h4{font:400 1.7rem/1.1 Anton,Impact,sans-serif;letter-spacing:.015em;text-transform:uppercase;margin:0 0 8px}.vc .vb p{color:#c7cedd;margin:0;line-height:1.5}
+.vempty{text-align:center;padding:clamp(36px,7vw,72px) 24px;border:1px dashed #2a3556;border-radius:22px;background:radial-gradient(circle at 50% 0,rgba(79,120,240,.14),transparent 60%),rgba(255,255,255,.02)}
+.vempty .vei{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 16px;border-radius:50%;color:var(--sky);border:1px solid rgba(110,168,254,.5);background:rgba(110,168,254,.1);box-shadow:0 0 40px rgba(79,120,240,.3)}.vempty .vei svg{width:26px;height:26px;margin-left:3px}
+.vempty h4{font:400 1.9rem Anton,Impact,sans-serif;text-transform:uppercase;margin:0 0 8px;letter-spacing:.015em}.vempty p{color:#c7cedd;margin:0 auto 22px;max-width:420px}
+dialog.vdlg{padding:18px;width:min(980px,95vw)}.vdlg .vh strong{font:400 1.5rem Anton,Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase}
+.vdlg .x{border:1px solid #2a3556;background:rgba(255,255,255,.05);color:#fff;border-radius:99px;padding:8px 16px;cursor:pointer;font:inherit}
+#vp iframe,#vp video{border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}#vo{display:inline-block;margin-top:12px;color:var(--sky);font-size:.9rem}
+@media(max-width:640px){.chead h1{font-size:2.4rem}.vc .vb h4{font-size:1.45rem}.vc .play{width:62px;height:62px}}
 </style>
 </head>
 <body>
@@ -424,7 +455,7 @@ dialog.lsheet{width:min(560px,94vw)}
   <div class="lnote"><b>How to get access</b><span>Team access is set up directly with us. Send a quick message and we&rsquo;ll get your coaching staff and roster set up.</span></div>
   <div class="lrow"><button type="button" class="x2" id="lx2">Maybe later</button><button type="button" class="go sgo" id="lgo">Request access <span>&rarr;</span></button></div></div>
 </div></dialog>
-<dialog id="vdlg" class="vdlg"><div class="vh"><strong id="vt"></strong><button type="button" class="x" id="vx">Close</button></div><div id="vp"></div><a id="vo" target="_blank" rel="noopener">Open in a new tab ↗</a></dialog>
+<dialog id="vdlg" class="vdlg sheet"><div class="vh"><strong id="vt"></strong><button type="button" class="x" id="vx">Close</button></div><div id="vp"></div><a id="vo" target="_blank" rel="noopener">Open in a new tab ↗</a></dialog>
 <dialog id="ldlg"><form class="dlg" id="lform"><h3>Owner login</h3><p>Sign in to add or remove videos.</p>
 <label for="lem">Email</label><input id="lem" type="email" required autocomplete="username" value="hoopnetwork10@gmail.com"><label for="lpw">Password</label><input id="lpw" type="password" required autocomplete="current-password">
 <div class="ok" id="lerr" hidden style="background:rgba(255,120,120,.1);border-color:rgba(255,120,120,.4);color:#ffb4b4"></div>
@@ -487,10 +518,18 @@ function parse(u){let m;
  if(m=u.match(/vimeo\.com\/(?:video\/)?(\d+)/))return{k:'f',s:'https://player.vimeo.com/video/'+m[1]+'?autoplay=1'};
  if(/\.(mp4|webm|mov)(\?|$)/i.test(u))return{k:'v',s:u};
  return{k:'l',s:u};}
-function card(v,i){return '<article class="vc"><a class="thumb" href="'+esc(v.u)+'" target="_blank" rel="noopener" aria-label="Watch '+esc(v.t)+' (opens in a new tab)"><span class="lab">HOOP NETWORK · VIDEO</span><span class="arc"></span>'+PLAY+'</a><div class="vb"><h4>'+esc(v.t)+'</h4>'+(v.d?'<p>'+esc(v.d)+'</p>':'')+(owner?'<button class="del" data-del="'+i+'">Remove video</button>':'')+'</div></article>';}
-function ph(){return '<article class="vc"><div class="thumb off"><span class="lab">HOOP NETWORK · VIDEO</span><span class="arc"></span>'+PLAY+'</div><div class="vb"><h4>Video coming soon</h4><p>New Hoop Network instruction is on the way.</p></div></article>';}
-function render(){const lib=$('lib'),list=DATA.v[cur]||[];
- lib.innerHTML='<div class="wrap"><a class="back" href="#library">← All categories</a><div class="row2"><h1>'+esc(CATS[cur])+' Library</h1>'+(owner?'<button class="btn small" id="addv">+ Add video</button>':'')+'</div><p class="sub2">Build your game with focused instruction from the Hoop Network.</p><div class="vgrid">'+(list.length?list.map(card).join(''):ph()+ph()+ph())+'</div></div>';}
+const CDESC={defense:'Man-to-man principles, help rotations and team defensive concepts, broken down on film.',inbound:'Baseline and sideline out-of-bounds plays that turn a dead ball into a clean look.',man:'Set plays and actions built to beat man-to-man defense.',zone:'How to attack 2-3, 3-2 and 1-3-1 zones and find the gaps.',press:'Break the full-court press with clear alignments and smart reads.'};
+function ytid(u){const m=u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/))([\w-]{11})/);return m&&m[1];}
+function card(v,i){const id=ytid(v.u);
+ return '<article class="vc"><button type="button" class="thumb" data-i="'+i+'" aria-label="Play '+esc(v.t)+'">'+(id?'<img src="https://i.ytimg.com/vi/'+id+'/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">':'')+'<span class="shade"></span><span class="lab">HOOP NETWORK</span>'+PLAY+'<span class="wtag">WATCH NOW</span></button><div class="vb"><div class="vk">'+esc(CATS[cur])+'</div><h4>'+esc(v.t)+'</h4>'+(v.d?'<p>'+esc(v.d)+'</p>':'')+(owner?'<button class="del" data-del="'+i+'">Remove video</button>':'')+'</div></article>';}
+function empty(){return '<div class="vempty"><div class="vei"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div><h4>New videos are on the way</h4><p>'+(owner?'Use + Add video to post the first one in this category.':'We are adding new Hoop Network instruction here soon. Check back shortly.')+'</p><a class="btn small" href="#/contact">Get notified: contact us</a></div>';}
+function render(){const lib=$('lib'),list=DATA.v[cur]||[],n=list.length;
+ const chips=Object.keys(CATS).map(k=>'<a class="chip'+(k===cur?' on':'')+'" href="#/c/'+k+'">'+esc(CATS[k])+'</a>').join('');
+ lib.innerHTML='<div class="wrap"><a class="back" href="#library">&larr; All categories</a>'
+ +'<section class="chead"><div class="cbg"></div><div class="cin"><span class="ck">FREE &middot; PLAY LIBRARY</span><h1>'+esc(CATS[cur])+'</h1><p>'+esc(CDESC[cur])+'</p><div class="cmeta"><span><b>'+n+'</b> '+(n===1?'video':'videos')+'</span><span>Free to watch</span>'+(owner?'<button class="btn small" id="addv">+ Add video</button>':'')+'</div></div></section>'
+ +'<div class="chips" role="navigation" aria-label="Categories">'+chips+'</div>'
+ +(n?'<div class="vgrid">'+list.map(card).join('')+'</div>':empty())+'</div>';
+ const src=document.querySelector('a.cat[href="#/c/'+cur+'"] .ph'),bg=lib.querySelector('.cbg');if(src&&bg)bg.style.backgroundImage=src.style.backgroundImage;}
 function route(){if(location.hash.split('?')[0]==='#/contact'){const q=new URLSearchParams(location.hash.split('?')[1]||''),fr=q.get('from')||'';$('cform').dataset.from=fr;if(fr)$('cr').value='Team access (locked videos)';cur=null;$('home').hidden=true;$('lib').hidden=true;$('cpg').hidden=false;document.title='Contact · Hoop Network';window.scrollTo(0,0);return;}if(!$('cpg').hidden){$('cform').reset();$('cform').dataset.from='';$('cstat').hidden=true;}$('cpg').hidden=true;const m=location.hash.match(/^#\/c\/(\w+)/);
  if(m&&CATS[m[1]]){cur=m[1];$('home').hidden=true;$('lib').hidden=false;render();document.title=CATS[cur]+' Library · Hoop Network';window.scrollTo(0,0);}
  else{cur=null;$('lib').hidden=true;$('home').hidden=false;document.title='Hoop Network | Free Basketball Film & Play Breakdowns';const el=location.hash.length>1&&document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView();}}
@@ -513,14 +552,14 @@ $('lform').addEventListener('submit',async e=>{e.preventDefault();const b=$('lgo
  catch(_){$('lerr').textContent='Wrong email or password.';$('lerr').hidden=false;}b.disabled=false;});
 $('lib').addEventListener('click',e=>{
  const t=e.target.closest('.thumb[data-i]'),d=e.target.closest('[data-del]');
- if(t){const v=(DATA.v[cur]||[])[+t.dataset.i];if(!v)return;const p=parse(v.u);
+ if(t){const v=(DATA.v[cur]||[])[+t.dataset.i];if(!v)return;const p=parse(v.u);if(p.k==='l'){window.open(v.u,'_blank','noopener');return;}
   $('vt').textContent=v.t;$('vo').href=v.u;const vp=$('vp');vp.innerHTML='';
   if(p.k==='f'){const f=document.createElement('iframe');f.src=p.s;f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;f.title=v.t;vp.appendChild(f);}
   else if(p.k==='v'){const x=document.createElement('video');x.src=p.s;x.controls=true;x.autoplay=true;x.playsInline=true;vp.appendChild(x);}
   $('vdlg').showModal();}
  else if(d){if(confirm('Remove this video?')){const v=DATA.v[cur][+d.dataset.del];sb('DELETE','videos?id=eq.'+v.id).then(()=>{DATA.v[cur].splice(+d.dataset.del,1);render();}).catch(er=>alert(er.message));}}
  else if(e.target.id==='addv'){$('aform').reset();$('adlg').showModal();}});
-$('vx').addEventListener('click',()=>$('vdlg').close());
+$('vx').addEventListener('click',()=>$('vdlg').close());$('vdlg').addEventListener('click',e=>{if(e.target===$('vdlg'))$('vdlg').close();});
 $('vdlg').addEventListener('close',()=>{$('vp').innerHTML='';});
 $('ax').addEventListener('click',()=>$('adlg').close());
 $('aform').addEventListener('submit',async e=>{e.preventDefault();
