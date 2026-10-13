@@ -343,6 +343,12 @@ dialog.vdlg{padding:18px;width:min(980px,95vw)}.vdlg .vh strong{font:400 1.5rem 
 .vdlg .x{border:1px solid #2a3556;background:rgba(255,255,255,.05);color:#fff;border-radius:99px;padding:8px 16px;cursor:pointer;font:inherit}
 #vp iframe,#vp video{border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}#vo{display:inline-block;margin-top:12px;color:var(--sky);font-size:.9rem}
 @media(max-width:640px){.chead h1{font-size:2.4rem}.vc .vb h4{font-size:1.45rem}.vc .play{width:62px;height:62px}}
+
+footer#sitefoot{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 16px;padding:26px 6vw 34px;font-size:.78rem;color:#6f7b98;border-top:1px solid #1b2338;margin-top:8px}
+#sitefoot a{color:inherit;opacity:.8;text-decoration:none}#sitefoot a:hover{opacity:1;text-decoration:underline}#sitefoot #ownbar a{opacity:.5}
+dialog.psheet{width:min(720px,94vw)}.pbody{position:relative;z-index:1;padding:8px 34px 34px;color:#c7cedd;font-size:.95rem;line-height:1.65}
+.pbody h4{font:800 .72rem Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);margin:24px 0 8px}.pbody p{margin:0 0 10px}.pbody ul{margin:0 0 10px;padding-left:20px}.pbody li{margin:0 0 6px}.pbody a{color:var(--sky)}.pbody b{color:#fff}
+@media(max-width:760px){.pbody{padding:6px 22px 28px}}
 </style>
 </head>
 <body>
@@ -408,8 +414,6 @@ dialog.vdlg{padding:18px;width:min(980px,95vw)}.vdlg .vh strong{font:400 1.5rem 
   <form id="mailform"><input type="email" required="" placeholder="Email" aria-label="Email"><button type="submit">Subscribe</button></form>
   <div class="ok" id="mailok" hidden="">Thanks, you're on the list.</div>
 </section>
-<footer>© Hoop Network <span id="ownbar"><a href="#" id="ownlink" style="color:inherit;opacity:.45;margin-left:14px;font-size:.8em">Owner login</a></span></footer>
-
 </div>
 <main id="lib" hidden=""></main>
 <main id="cpg" hidden=""><div class="wrap"><a class="back" href="#top">← Back home</a>
@@ -420,6 +424,32 @@ dialog.vdlg{padding:18px;width:min(980px,95vw)}.vdlg .vh strong{font:400 1.5rem 
 <label for="cr">What is this about?</label><select id="cr" required><option value="">Choose one</option><option>Team access (locked videos)</option><option>Strategy session</option><option>Question about the free videos</option><option>Something else</option></select>
 <label for="cm">Message</label><textarea id="cm" rows="6" required="" maxlength="2000"></textarea>
 <button type="submit" class="btn" style="margin-top:22px">Send message</button><div class="ok" id="cstat" hidden=""></div></form></div></main>
+<footer id="sitefoot">&copy; Hoop Network<a href="#" id="privlink">Privacy Policy</a><span id="ownbar"><a href="#" id="ownlink">Owner login</a></span></footer>
+<dialog id="pdlg" class="sheet psheet"><div class="sh one" style="--tc:#6ea8fe">
+  <button type="button" class="sx" id="px" aria-label="Close">&times;</button>
+  <div class="lh" style="text-align:left"><div class="sk">LEGAL</div><h3>Privacy Policy</h3><p class="sl" style="margin:0">Last updated October 12, 2026</p></div>
+  <div class="pbody">
+  <p>Hoop Network (&ldquo;we&rdquo;, &ldquo;us&rdquo;) runs hoopnetwork.net, a basketball education site with free video breakdowns, coaching sessions and team access for coaches. This policy explains what information we collect and how we use it.</p>
+  <h4>Information we collect</h4>
+  <ul><li><b>Contact and inquiry forms:</b> your name, email, optional phone number, the reason for your message, any preferred days or times or city you enter, and the message itself.</li>
+  <li><b>Email list:</b> your email address if you sign up.</li>
+  <li><b>Automatic technical data:</b> like most websites, our hosting and the services below may receive your IP address and browser details when you load the site.</li></ul>
+  <p>We do not ask for payment details on this site, and we do not sell your personal information.</p>
+  <h4>How we use it</h4>
+  <ul><li>To reply to your message and to check availability for sessions.</li>
+  <li>To set up team access for coaches and teams.</li>
+  <li>To send Hoop Network updates if you joined the email list. You can ask to be removed at any time.</li></ul>
+  <h4>Where it is stored and who handles it</h4>
+  <p>Form submissions are saved in our database (Supabase) and emailed to us through a form service (Web3Forms). The site is hosted on GitHub Pages. Videos play from YouTube or Vimeo, and fonts load from Google Fonts, so those companies may collect basic data, such as your IP address, under their own policies.</p>
+  <h4>Children</h4>
+  <p>This site is for coaches, players and parents. We do not knowingly collect personal information from children under 13 without a parent&rsquo;s or guardian&rsquo;s consent. If you are a parent and believe your child has sent us information, or you want a photo of your child removed from the site, email us and we will take care of it.</p>
+  <h4>Keeping and deleting your information</h4>
+  <p>We keep messages and email-list addresses only as long as needed for the purposes above. To see, correct or delete your information, or to be removed from the email list, email <a href="mailto:hoopnetwork10@gmail.com">hoopnetwork10@gmail.com</a>.</p>
+  <h4>Changes</h4>
+  <p>We may update this policy and will change the date above when we do.</p>
+  <h4>Contact</h4>
+  <p>Hoop Network &middot; <a href="mailto:hoopnetwork10@gmail.com">hoopnetwork10@gmail.com</a></p>
+  </div></div></dialog>
 <dialog id="dlg" class="sheet"><form method="dialog" id="inq" class="sh" style="--tc:#b8c4dc">
   <button type="button" class="sx" id="close" aria-label="Close">&times;</button>
   <aside class="sa">
@@ -536,16 +566,17 @@ function route(){if(location.hash.split('?')[0]==='#/contact'){const q=new URLSe
 const AUTH=SB_URL.replace('/rest/v1/','/auth/v1/'),TKEY='hn_owner_session';
 let SESS=null;try{SESS=JSON.parse(localStorage.getItem(TKEY)||'null');}catch(_){}
 function setSess(x){SESS=x;try{x?localStorage.setItem(TKEY,JSON.stringify(x)):localStorage.removeItem(TKEY);}catch(_){}owner=!!x;ownUI();if(cur)render();}
-function ownUI(){const b=$('ownbar');b.innerHTML=owner?'<span style="margin-left:14px;font-size:.8em;opacity:.8">Owner mode · <a href="#" id="ownout" style="color:inherit">Log out</a></span>':'<a href="#" id="ownlink" style="color:inherit;opacity:.45;margin-left:14px;font-size:.8em">Owner login</a>';}
+function ownUI(){const b=$('ownbar');b.innerHTML=owner?'<span>Owner mode · <a href="#" id="ownout">Log out</a></span>':'<a href="#" id="ownlink">Owner login</a>';}
 async function tok(){if(!SESS)return null;if(SESS.exp-Date.now()>60000)return SESS.at;
  try{const r=await fetch(AUTH+'token?grant_type=refresh_token',{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:SESS.rt})});if(!r.ok)throw 0;const j=await r.json();SESS={at:j.access_token,rt:j.refresh_token,exp:Date.now()+j.expires_in*1000};try{localStorage.setItem(TKEY,JSON.stringify(SESS));}catch(_){}return SESS.at;}catch(_){setSess(null);return null;}}
 async function sb(method,path,body){const t=await tok();if(!t)throw new Error('Please log in again.');
  const r=await fetch(SB_URL+path,{method,headers:{apikey:SB_KEY,Authorization:'Bearer '+t,'Content-Type':'application/json',Prefer:'return=representation'},body:body?JSON.stringify(body):undefined});
  if(!r.ok)throw new Error('Could not save ('+r.status+').');return r.status===204?null:r.json();}
 async function loadVideos(){try{const r=await fetch(SB_URL+'videos?select=id,category,title,url,description&order=position.asc,created_at.asc',{headers:{apikey:SB_KEY}});if(!r.ok)return;const rows=await r.json();DATA.v={};rows.forEach(x=>{(DATA.v[x.category]=DATA.v[x.category]||[]).push({id:x.id,t:x.title,u:x.url,d:x.description||''});});if(cur)render();}catch(_){}}
-document.addEventListener('click',e=>{if(e.target.id==='ownlink'){e.preventDefault();$('lform').reset();$('lerr').hidden=true;$('ldlg').showModal();}
+document.addEventListener('click',e=>{if(e.target.id==='privlink'){e.preventDefault();$('pdlg').showModal();$('pdlg').scrollTop=0;}
+ if(e.target.id==='ownlink'){e.preventDefault();$('lform').reset();$('lerr').hidden=true;$('ldlg').showModal();}
  if(e.target.id==='ownout'){e.preventDefault();setSess(null);}});
-$('lcx').addEventListener('click',()=>$('ldlg').close());
+$('lcx').addEventListener('click',()=>$('ldlg').close());$('px').addEventListener('click',()=>$('pdlg').close());$('pdlg').addEventListener('click',e=>{if(e.target===$('pdlg'))$('pdlg').close();});
 $('lform').addEventListener('submit',async e=>{e.preventDefault();const b=$('lgo2');b.disabled=true;$('lerr').hidden=true;
  try{const r=await fetch(AUTH+'token?grant_type=password',{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({email:$('lem').value.trim(),password:$('lpw').value})});if(!r.ok)throw 0;const j=await r.json();
   setSess({at:j.access_token,rt:j.refresh_token,exp:Date.now()+j.expires_in*1000});$('ldlg').close();}
