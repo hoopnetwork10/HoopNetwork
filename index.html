@@ -370,7 +370,7 @@ dialog.lsheet{width:min(560px,94vw)}
   <form id="mailform"><input type="email" required="" placeholder="Email" aria-label="Email"><button type="submit">Subscribe</button></form>
   <div class="ok" id="mailok" hidden="">Thanks, you're on the list.</div>
 </section>
-<footer>© Hoop Network</footer>
+<footer>© Hoop Network <span id="ownbar"><a href="#" id="ownlink" style="color:inherit;opacity:.45;margin-left:14px;font-size:.8em">Owner login</a></span></footer>
 
 </div>
 <main id="lib" hidden=""></main>
@@ -418,10 +418,14 @@ dialog.lsheet{width:min(560px,94vw)}
   <div class="lrow"><button type="button" class="x2" id="lx2">Maybe later</button><button type="button" class="go sgo" id="lgo">Request access <span>&rarr;</span></button></div></div>
 </div></dialog>
 <dialog id="vdlg" class="vdlg"><div class="vh"><strong id="vt"></strong><button type="button" class="x" id="vx">Close</button></div><div id="vp"></div><a id="vo" target="_blank" rel="noopener">Open in a new tab ↗</a></dialog>
+<dialog id="ldlg"><form class="dlg" id="lform"><h3>Owner login</h3><p>Sign in to add or remove videos.</p>
+<label for="lem">Email</label><input id="lem" type="email" required autocomplete="username" value="hoopnetwork10@gmail.com"><label for="lpw">Password</label><input id="lpw" type="password" required autocomplete="current-password">
+<div class="ok" id="lerr" hidden style="background:rgba(255,120,120,.1);border-color:rgba(255,120,120,.4);color:#ffb4b4"></div>
+<div class="row"><button type="button" class="x" id="lcx">Cancel</button><button type="submit" class="go" id="lgo2">Sign in</button></div></form></dialog>
 <dialog id="adlg"><grammarly-extension data-grammarly-shadow-root="true" style="visibility: visible !important; position: absolute; top: -1px; left: -1px; pointer-events: none; margin: 0px; border: 0px; --rem: 16;" class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="visibility: visible !important; position: absolute; top: -1px; left: -1px; pointer-events: none; margin: 0px; border: 0px; --rem: 16;" class="dnXmp"></grammarly-extension><form class="dlg" id="aform"><h3>Add a video</h3><p>Paste a YouTube or Vimeo link, or a direct .mp4 link.</p>
 <label for="at">Title</label><input id="at" required="" maxlength="80"><label for="au">Video link</label><input id="au" type="url" required="" placeholder="https://">
 <label for="ad">Short description</label><textarea id="ad" rows="2" maxlength="160" spellcheck="false"></textarea>
-<div class="row"><button type="button" class="x" id="ax">Cancel</button><button type="submit" class="go" id="ago" disabled="">Add video</button></div></form><grammarly-popups data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-popups><grammarly-extension-vbars data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbars><grammarly-extension-vbar-card data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbar-card><grammarly-extension-vbars-feedback-form data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbars-feedback-form><superhuman-go-underlines data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; display: contents; --rem: 16;"></superhuman-go-underlines><superhuman-go-underline-card data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></superhuman-go-underline-card></dialog>
+<div class="row"><button type="button" class="x" id="ax">Cancel</button><button type="submit" class="go" id="ago">Add video</button></div></form><grammarly-popups data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-popups><grammarly-extension-vbars data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbars><grammarly-extension-vbar-card data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbar-card><grammarly-extension-vbars-feedback-form data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></grammarly-extension-vbars-feedback-form><superhuman-go-underlines data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; display: contents; --rem: 16;"></superhuman-go-underlines><superhuman-go-underline-card data-grammarly-shadow-root="true" class="dnXmp" style="visibility: visible !important; position: fixed; top: 0px; left: 0px; width: 100vw; height: 0px; z-index: 2147483647; overflow: visible; --rem: 16;"></superhuman-go-underline-card></dialog>
 <script type="application/json" id="data">{"v":{"zone":[{"t":"video 1","u":"https://www.youtube.com/watch?v=ScF0pi6FSLQ","d":"defense"}]}}</script>
 
 <script>
@@ -483,17 +487,23 @@ function render(){const lib=$('lib'),list=DATA.v[cur]||[];
 function route(){if(location.hash.split('?')[0]==='#/contact'){const q=new URLSearchParams(location.hash.split('?')[1]||''),fr=q.get('from')||'';$('cform').dataset.from=fr;if(fr)$('cr').value='Team access (locked videos)';cur=null;$('home').hidden=true;$('lib').hidden=true;$('cpg').hidden=false;document.title='Contact · Hoop Network';window.scrollTo(0,0);return;}if(!$('cpg').hidden){$('cform').reset();$('cform').dataset.from='';$('cstat').hidden=true;}$('cpg').hidden=true;const m=location.hash.match(/^#\/c\/(\w+)/);
  if(m&&CATS[m[1]]){cur=m[1];$('home').hidden=true;$('lib').hidden=false;render();document.title=CATS[cur]+' Library · Hoop Network';window.scrollTo(0,0);}
  else{cur=null;$('lib').hidden=true;$('home').hidden=false;document.title='Hoop Network';const el=location.hash.length>1&&document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView();}}
-async function save(){
- try{const art=window.claude&&await claude.use('artifact');
-  if(!art){alert('Saving is only available to the page owner.');return;}
-  const c=document.documentElement.cloneNode(true);
-  c.querySelector('#data').textContent=JSON.stringify(DATA).replace(/</g,'\\u003c');
-  const l=c.querySelector('#lib');l.innerHTML='';l.hidden=true;c.querySelector('#home').hidden=false;
-  c.querySelector('#vp').innerHTML='';c.querySelectorAll('.lk').forEach(x=>{x.style.backgroundImage='';x.style.backgroundPosition='';});c.querySelector('#cpg').hidden=true;c.querySelector('#cstat').hidden=true;
-  c.querySelectorAll('dialog').forEach(d=>d.removeAttribute('open'));
-  c.querySelectorAll('#sent,#mailok').forEach(e=>e.hidden=true);c.querySelector('#mailform').hidden=false;
-  await art.publish('<!DOCTYPE html>\n'+c.outerHTML);
- }catch(e){if(!e||e.code!=='conflict')alert('Could not save: '+((e&&e.message)||'try again'));}}
+const AUTH=SB_URL.replace('/rest/v1/','/auth/v1/'),TKEY='hn_owner_session';
+let SESS=null;try{SESS=JSON.parse(localStorage.getItem(TKEY)||'null');}catch(_){}
+function setSess(x){SESS=x;try{x?localStorage.setItem(TKEY,JSON.stringify(x)):localStorage.removeItem(TKEY);}catch(_){}owner=!!x;ownUI();if(cur)render();}
+function ownUI(){const b=$('ownbar');b.innerHTML=owner?'<span style="margin-left:14px;font-size:.8em;opacity:.8">Owner mode · <a href="#" id="ownout" style="color:inherit">Log out</a></span>':'<a href="#" id="ownlink" style="color:inherit;opacity:.45;margin-left:14px;font-size:.8em">Owner login</a>';}
+async function tok(){if(!SESS)return null;if(SESS.exp-Date.now()>60000)return SESS.at;
+ try{const r=await fetch(AUTH+'token?grant_type=refresh_token',{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:SESS.rt})});if(!r.ok)throw 0;const j=await r.json();SESS={at:j.access_token,rt:j.refresh_token,exp:Date.now()+j.expires_in*1000};try{localStorage.setItem(TKEY,JSON.stringify(SESS));}catch(_){}return SESS.at;}catch(_){setSess(null);return null;}}
+async function sb(method,path,body){const t=await tok();if(!t)throw new Error('Please log in again.');
+ const r=await fetch(SB_URL+path,{method,headers:{apikey:SB_KEY,Authorization:'Bearer '+t,'Content-Type':'application/json',Prefer:'return=representation'},body:body?JSON.stringify(body):undefined});
+ if(!r.ok)throw new Error('Could not save ('+r.status+').');return r.status===204?null:r.json();}
+async function loadVideos(){try{const r=await fetch(SB_URL+'videos?select=id,category,title,url,description&order=position.asc,created_at.asc',{headers:{apikey:SB_KEY}});if(!r.ok)return;const rows=await r.json();DATA.v={};rows.forEach(x=>{(DATA.v[x.category]=DATA.v[x.category]||[]).push({id:x.id,t:x.title,u:x.url,d:x.description||''});});if(cur)render();}catch(_){}}
+document.addEventListener('click',e=>{if(e.target.id==='ownlink'){e.preventDefault();$('lform').reset();$('lerr').hidden=true;$('ldlg').showModal();}
+ if(e.target.id==='ownout'){e.preventDefault();setSess(null);}});
+$('lcx').addEventListener('click',()=>$('ldlg').close());
+$('lform').addEventListener('submit',async e=>{e.preventDefault();const b=$('lgo2');b.disabled=true;$('lerr').hidden=true;
+ try{const r=await fetch(AUTH+'token?grant_type=password',{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({email:$('lem').value.trim(),password:$('lpw').value})});if(!r.ok)throw 0;const j=await r.json();
+  setSess({at:j.access_token,rt:j.refresh_token,exp:Date.now()+j.expires_in*1000});$('ldlg').close();}
+ catch(_){$('lerr').textContent='Wrong email or password.';$('lerr').hidden=false;}b.disabled=false;});
 $('lib').addEventListener('click',e=>{
  const t=e.target.closest('.thumb[data-i]'),d=e.target.closest('[data-del]');
  if(t){const v=(DATA.v[cur]||[])[+t.dataset.i];if(!v)return;const p=parse(v.u);
@@ -501,15 +511,16 @@ $('lib').addEventListener('click',e=>{
   if(p.k==='f'){const f=document.createElement('iframe');f.src=p.s;f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;f.title=v.t;vp.appendChild(f);}
   else if(p.k==='v'){const x=document.createElement('video');x.src=p.s;x.controls=true;x.autoplay=true;x.playsInline=true;vp.appendChild(x);}
   $('vdlg').showModal();}
- else if(d){if(confirm('Remove this video?')){DATA.v[cur].splice(+d.dataset.del,1);render();save();}}
+ else if(d){if(confirm('Remove this video?')){const v=DATA.v[cur][+d.dataset.del];sb('DELETE','videos?id=eq.'+v.id).then(()=>{DATA.v[cur].splice(+d.dataset.del,1);render();}).catch(er=>alert(er.message));}}
  else if(e.target.id==='addv'){$('aform').reset();$('adlg').showModal();}});
 $('vx').addEventListener('click',()=>$('vdlg').close());
 $('vdlg').addEventListener('close',()=>{$('vp').innerHTML='';});
 $('ax').addEventListener('click',()=>$('adlg').close());
 $('aform').addEventListener('submit',async e=>{e.preventDefault();
  const u=$('au').value.trim();if(!/^https?:\/\//i.test(u))return;
- (DATA.v[cur]=DATA.v[cur]||[]).push({t:$('at').value.trim(),u:u,d:$('ad').value.trim()});
- $('ago').disabled=true;$('adlg').close();render();await save();$('ago').disabled=false;});
+ $('ago').disabled=true;
+ try{const r=await sb('POST','videos',{category:cur,title:$('at').value.trim(),url:u,description:$('ad').value.trim()||null});const x=r[0];(DATA.v[cur]=DATA.v[cur]||[]).push({id:x.id,t:x.title,u:x.url,d:x.description||''});$('adlg').close();render();}
+ catch(er){alert(er.message);}$('ago').disabled=false;});
 const CONTACT_EMAIL='hoopnetwork10@gmail.com';
 $('cform').addEventListener('submit',async e=>{e.preventDefault();const s=$('cstat'),f=$('cform'),btn=f.querySelector('button[type=submit]');s.hidden=false;s.textContent='Sending...';btn.disabled=true;
  const ok=await window.HN_send({name:$('cn').value.trim(),email:$('ce').value.trim(),phone:$('cp').value.trim(),reason:$('cr').value,card:f.dataset.from||'',message:$('cm').value.trim()});
@@ -518,7 +529,7 @@ $('cform').addEventListener('submit',async e=>{e.preventDefault();const s=$('cst
  else{s.textContent='Something went wrong sending that. Please email us directly at '+CONTACT_EMAIL+'.';}});
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const hr=a.getAttribute('href');if(hr.length<2)return;e.preventDefault();if(location.hash!==hr)location.hash=hr;else route();});
 addEventListener('hashchange',route);route();
-if(window.claude&&claude.use)claude.use('user').then(u=>{owner=!!(u&&u.isOwner());if(cur)render();}).catch(()=>{});
+if(SESS){owner=true;ownUI();tok().then(t=>{if(t&&cur)render();});}loadVideos();
 })();
 </script>
 
