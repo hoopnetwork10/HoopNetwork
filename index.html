@@ -425,6 +425,12 @@ dialog.lsheet{width:min(560px,94vw)}
 <script type="application/json" id="data">{"v":{"zone":[{"t":"video 1","u":"https://www.youtube.com/watch?v=ScF0pi6FSLQ","d":"defense"}]}}</script>
 
 <script>
+const HN_EMAIL='hoopnetwork10@gmail.com',W3F_KEY='',SB_URL='https://qzxfibppuygoaxylpgck.supabase.co/rest/v1/',SB_KEY='sb_publishable_1L4CXvt4w6NU5OZnh1y-dw_xWuJWfZp';
+window.HN_send=async function(r){
+  const cut=(t,n)=>String(t||'').slice(0,n);let saved=false,mailed=false;
+  try{const x=await fetch(SB_URL+'contact_messages',{method:'POST',headers:{'apikey':SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({name:cut(r.name,80),email:cut(r.email,254),phone:r.phone?cut(r.phone,30):null,reason:cut(r.reason,80),from_card:r.card?cut(r.card,80):null,message:cut(r.message,2000)||'(no message)'})});saved=x.ok;}catch(_){}
+  if(W3F_KEY){try{const x=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:W3F_KEY,subject:'Hoop Network: '+r.reason+' - '+r.name,from_name:'Hoop Network website',name:r.name,email:r.email,phone:r.phone||'',reason:r.reason,message:(r.card?'Clicked locked card: '+r.card+'\n\n':'')+r.message})});const j=await x.json();mailed=!!j.success;}catch(_){}}
+  return saved||mailed;};
 const dlg=document.getElementById('dlg'),inq=document.getElementById('inq'),sent=document.getElementById('sent');
 const TIERS={Silver:{c:'#b8c4dc',k:'SILVER',t:'Quick Consult',p:'$30\u2013$45',l:'A fast, focused call to get answers on the exact things you are stuck on.',f:['30\u201345 minute Zoom call','Focused on 2\u20133 topics or plays','Straight, actionable feedback','Come with specific questions'],b:'Players and coaches with a few targeted questions'},
 Gold:{c:'#e0b04a',k:'GOLD \u00b7 CORE SESSION',t:'Film & Concepts',p:'$60\u2013$75',l:'A deeper working session built around your film, your plays and your concepts.',f:['60 minute Zoom session','Up to 5 concepts or plays','Review clips, plays or your playbook','Share film ahead of time for a sharper session'],b:'Coaches and players who want film broken down in detail'},
@@ -440,18 +446,21 @@ document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',(
   sent.hidden=true;inq.reset();dlg.showModal();dlg.scrollTop=0;}));
 document.getElementById('close').addEventListener('click',()=>dlg.close());
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
-inq.addEventListener('submit',e=>{e.preventDefault();const E='hoopnetwork10@gmail.com',T=TIERS[curTier],pl=T.t+' ('+curTier+')',v=id=>document.getElementById(id).value.trim(),n=v('n'),em=v('e');
-let body='Session: '+pl+'\n';
+inq.addEventListener('submit',async e=>{e.preventDefault();const T=TIERS[curTier],pl=T.t+' ('+curTier+')',v=id=>document.getElementById(id).value.trim(),btn=inq.querySelector('.sgo');
+let body='';
 if(v('wh'))body+='Preferred days/times: '+v('wh')+'\n';
 if(curTier==='Diamond'){body+='For: '+inq.querySelector('input[name=who]:checked').value+'\n';if(v('ct'))body+='Location: '+v('ct')+'\n';}
-body+='\n'+v('m')+'\n\nFrom: '+n+' ('+em+')'+(v('ph')?' \u00b7 '+v('ph'):'');
-const a=document.createElement('a');a.href='mailto:'+E+'?subject='+encodeURIComponent('Hoop Network session inquiry: '+pl+' - '+n)+'&body='+encodeURIComponent(body);document.body.appendChild(a);a.click();a.remove();
-sent.hidden=false;sent.textContent='Your email app should open with your inquiry ready to send. If it does not, email us at '+E+'.';});
+body+='\n'+v('m');
+btn.disabled=true;const old=btn.innerHTML;btn.textContent='Sending...';
+const ok=await HN_send({name:v('n'),email:v('e'),phone:v('ph'),reason:'Session inquiry: '+pl,message:body.trim()});
+btn.disabled=false;btn.innerHTML=old;sent.hidden=false;
+if(ok){sent.textContent="Inquiry sent! We'll check availability and email you to confirm time and price.";inq.reset();}
+else{sent.textContent='Something went wrong sending that. Please email us directly at '+HN_EMAIL+'.';}});
 document.getElementById('mailform').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,E='hoopnetwork10@gmail.com',em=f.querySelector('input').value.trim(),btn=f.querySelector('button'),ok=document.getElementById('mailok');btn.disabled=true;
 let saved=false;
 try{const r=await fetch('https://qzxfibppuygoaxylpgck.supabase.co/rest/v1/email_signups',{method:'POST',headers:{'apikey':'sb_publishable_1L4CXvt4w6NU5OZnh1y-dw_xWuJWfZp','Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({email:em,source:'website'})});saved=r.ok||r.status===409;}catch(_){}
 if(saved){ok.textContent="Thanks, you're on the list.";}
-else{const a=document.createElement('a');a.href='mailto:'+E+'?subject='+encodeURIComponent('Add me to the Hoop Network email list')+'&body='+encodeURIComponent('Please add me to the email list: '+em);document.body.appendChild(a);a.click();a.remove();ok.textContent='Your email app should open to send your request. If it does not, email '+E+'.';}
+else{ok.textContent='Something went wrong. Please email '+E+' to join the list.';}
 f.hidden=true;ok.hidden=false;btn.disabled=false;});
 </script>
 <script>
@@ -502,12 +511,11 @@ $('aform').addEventListener('submit',async e=>{e.preventDefault();
  (DATA.v[cur]=DATA.v[cur]||[]).push({t:$('at').value.trim(),u:u,d:$('ad').value.trim()});
  $('ago').disabled=true;$('adlg').close();render();await save();$('ago').disabled=false;});
 const CONTACT_EMAIL='hoopnetwork10@gmail.com';
-$('cform').addEventListener('submit',e=>{e.preventDefault();const s=$('cstat');s.hidden=false;
- if(!CONTACT_EMAIL){s.textContent='The contact email is not set up yet. Please check back soon.';return;}
- const rs=$('cr').value,fr=$('cform').dataset.from||'';const sub=encodeURIComponent('Hoop Network: '+rs+' - '+$('cn').value.trim());
- const body=encodeURIComponent('Reason: '+rs+(fr?' (clicked the locked card: '+fr+')':'')+'\n\n'+$('cm').value.trim()+'\n\nFrom: '+$('cn').value.trim()+' ('+$('ce').value.trim()+')'+($('cp').value.trim()?'\nPhone: '+$('cp').value.trim():''));
- const a=document.createElement('a');a.href='mailto:'+CONTACT_EMAIL+'?subject='+sub+'&body='+body;document.body.appendChild(a);a.click();a.remove();$('cform').reset();$('cform').dataset.from='';
- s.textContent='Your email app should open with your message ready to send. If it does not, email us at '+CONTACT_EMAIL+'.';});
+$('cform').addEventListener('submit',async e=>{e.preventDefault();const s=$('cstat'),f=$('cform'),btn=f.querySelector('button[type=submit]');s.hidden=false;s.textContent='Sending...';btn.disabled=true;
+ const ok=await window.HN_send({name:$('cn').value.trim(),email:$('ce').value.trim(),phone:$('cp').value.trim(),reason:$('cr').value,card:f.dataset.from||'',message:$('cm').value.trim()});
+ btn.disabled=false;
+ if(ok){f.reset();f.dataset.from='';s.textContent="Message sent! Thanks for reaching out. We'll get back to you soon.";}
+ else{s.textContent='Something went wrong sending that. Please email us directly at '+CONTACT_EMAIL+'.';}});
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const hr=a.getAttribute('href');if(hr.length<2)return;e.preventDefault();if(location.hash!==hr)location.hash=hr;else route();});
 addEventListener('hashchange',route);route();
 if(window.claude&&claude.use)claude.use('user').then(u=>{owner=!!(u&&u.isOwner());if(cur)render();}).catch(()=>{});
