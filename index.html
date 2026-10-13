@@ -2,7 +2,14 @@
 <html lang="en" data-theme="dark" style="color-scheme: dark;"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Plays against zone Library · Hoop Network</title>
+<title>Hoop Network | Free Basketball Film &amp; Play Breakdowns</title>
+<meta name="description" content="Hoop Network (HoopNetwork) is a basketball education brand with free film breakdowns on defense, inbound plays, plays against man and zone, and press break, plus coaching sessions and team access for coaches.">
+<link rel="canonical" href="https://hoopnetwork.net/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Hoop Network"><meta property="og:title" content="Hoop Network | Free Basketball Film &amp; Play Breakdowns"><meta property="og:description" content="Free basketball film breakdowns, plays and coaching sessions from Hoop Network."><meta property="og:url" content="https://hoopnetwork.net/"><meta property="og:image" content="https://hoopnetwork.net/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hoop Network | Free Basketball Film &amp; Play Breakdowns"><meta name="twitter:description" content="Free basketball film breakdowns, plays and coaching sessions from Hoop Network."><meta name="twitter:image" content="https://hoopnetwork.net/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hoop Network","alternateName":["HoopNetwork","Hoop Network Basketball"],"url":"https://hoopnetwork.net/","email":"hoopnetwork10@gmail.com","description":"Basketball education brand with free film breakdowns, coaching sessions and team access for coaches."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Hoop Network","alternateName":"HoopNetwork","url":"https://hoopnetwork.net/"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -486,7 +493,7 @@ function render(){const lib=$('lib'),list=DATA.v[cur]||[];
  lib.innerHTML='<div class="wrap"><a class="back" href="#library">← All categories</a><div class="row2"><h1>'+esc(CATS[cur])+' Library</h1>'+(owner?'<button class="btn small" id="addv">+ Add video</button>':'')+'</div><p class="sub2">Build your game with focused instruction from the Hoop Network.</p><div class="vgrid">'+(list.length?list.map(card).join(''):ph()+ph()+ph())+'</div></div>';}
 function route(){if(location.hash.split('?')[0]==='#/contact'){const q=new URLSearchParams(location.hash.split('?')[1]||''),fr=q.get('from')||'';$('cform').dataset.from=fr;if(fr)$('cr').value='Team access (locked videos)';cur=null;$('home').hidden=true;$('lib').hidden=true;$('cpg').hidden=false;document.title='Contact · Hoop Network';window.scrollTo(0,0);return;}if(!$('cpg').hidden){$('cform').reset();$('cform').dataset.from='';$('cstat').hidden=true;}$('cpg').hidden=true;const m=location.hash.match(/^#\/c\/(\w+)/);
  if(m&&CATS[m[1]]){cur=m[1];$('home').hidden=true;$('lib').hidden=false;render();document.title=CATS[cur]+' Library · Hoop Network';window.scrollTo(0,0);}
- else{cur=null;$('lib').hidden=true;$('home').hidden=false;document.title='Hoop Network';const el=location.hash.length>1&&document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView();}}
+ else{cur=null;$('lib').hidden=true;$('home').hidden=false;document.title='Hoop Network | Free Basketball Film & Play Breakdowns';const el=location.hash.length>1&&document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView();}}
 const AUTH=SB_URL.replace('/rest/v1/','/auth/v1/'),TKEY='hn_owner_session';
 let SESS=null;try{SESS=JSON.parse(localStorage.getItem(TKEY)||'null');}catch(_){}
 function setSess(x){SESS=x;try{x?localStorage.setItem(TKEY,JSON.stringify(x)):localStorage.removeItem(TKEY);}catch(_){}owner=!!x;ownUI();if(cur)render();}
