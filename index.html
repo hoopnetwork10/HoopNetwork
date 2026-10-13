@@ -425,7 +425,7 @@ dialog.lsheet{width:min(560px,94vw)}
 <script type="application/json" id="data">{"v":{"zone":[{"t":"video 1","u":"https://www.youtube.com/watch?v=ScF0pi6FSLQ","d":"defense"}]}}</script>
 
 <script>
-const HN_EMAIL='hoopnetwork10@gmail.com',W3F_KEY='',SB_URL='https://qzxfibppuygoaxylpgck.supabase.co/rest/v1/',SB_KEY='sb_publishable_1L4CXvt4w6NU5OZnh1y-dw_xWuJWfZp';
+const HN_EMAIL='hoopnetwork10@gmail.com',W3F_KEY='766e06a2-eb01-4e73-9ed0-34fcd6a3f222',SB_URL='https://qzxfibppuygoaxylpgck.supabase.co/rest/v1/',SB_KEY='sb_publishable_1L4CXvt4w6NU5OZnh1y-dw_xWuJWfZp';
 window.HN_send=async function(r){
   const cut=(t,n)=>String(t||'').slice(0,n);let saved=false,mailed=false;
   try{const x=await fetch(SB_URL+'contact_messages',{method:'POST',headers:{'apikey':SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({name:cut(r.name,80),email:cut(r.email,254),phone:r.phone?cut(r.phone,30):null,reason:cut(r.reason,80),from_card:r.card?cut(r.card,80):null,message:cut(r.message,2000)||'(no message)'})});saved=x.ok;}catch(_){}
